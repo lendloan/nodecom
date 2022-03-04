@@ -1,13 +1,8 @@
 package nodecom
 
 import (
-	"github.com/lendloan/lendproto/friendnode"
-	"github.com/lendloan/lendproto/notenode"
-
 	"github.com/lendloan/lendproto/loginnode"
 	"github.com/lendloan/lendproto/registernode"
-
-	"github.com/lendloan/lendproto/searchnode"
 
 	"github.com/lendloan/lendproto/common"
 
@@ -23,9 +18,7 @@ import (
 	"github.com/lendloan/lendproto/macipnode"
 	"github.com/lendloan/lendproto/paynode"
 	"github.com/lendloan/lendproto/pkgnode"
-	"github.com/lendloan/lendproto/questionnode"
 	"github.com/lendloan/lendproto/sensinode"
-	"github.com/lendloan/lendproto/teachnode"
 	"github.com/lendloan/lendproto/usernode"
 	"go-micro.dev/v4/client"
 )
@@ -62,7 +55,6 @@ func Codenode(s2sname string, cli client.Client) codenode.CodenodeService {
 
 	return reqcli
 }
-
 
 // 获取cloud节点客户端
 //
