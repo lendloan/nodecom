@@ -19,6 +19,7 @@ import (
 	"github.com/lendloan/lendproto/paynode"
 	"github.com/lendloan/lendproto/pkgnode"
 	"github.com/lendloan/lendproto/sensinode"
+	"github.com/lendloan/lendproto/sharenode"
 	"github.com/lendloan/lendproto/usernode"
 	"go-micro.dev/v4/client"
 )
@@ -180,6 +181,14 @@ func Cronnode(s2sname string, cli client.Client) cronnode.CronnodeService {
 //
 func Paynode(s2sname string, cli client.Client) paynode.PaynodeService {
 	reqcli := paynode.NewPaynodeService(s2sname, cli)
+
+	return reqcli
+}
+
+// 获取mesharenode客户端
+//
+func Sharenode(s2sname string, cli client.Client) sharenode.SharenodeService {
+	reqcli := sharenode.NewSharenodeService(s2sname, cli)
 
 	return reqcli
 }
