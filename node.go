@@ -196,7 +196,7 @@ func Sharenode(s2sname string, cli client.Client) sharenode.SharenodeService {
 
 // 获取friendnode客户端
 //
-func Friendnode(s2sname string, cli client.Client) sharenode.FriendnodeService {
+func Friendnode(s2sname string, cli client.Client) friendnode.FriendnodeService {
 	reqcli := friendnode.NewFriendnodeService(s2sname, cli)
 
 	return reqcli
