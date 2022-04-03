@@ -22,6 +22,7 @@ import (
 	"github.com/lendloan/lendproto/sharenode"
 	"github.com/lendloan/lendproto/usernode"
 	"github.com/lendloan/lendproto/friendnode"
+	"github.com/lendloan/lendproto/loannode"
 	"go-micro.dev/v4/client"
 )
 
@@ -198,6 +199,14 @@ func Sharenode(s2sname string, cli client.Client) sharenode.SharenodeService {
 //
 func Friendnode(s2sname string, cli client.Client) friendnode.FriendnodeService {
 	reqcli := friendnode.NewFriendnodeService(s2sname, cli)
+
+	return reqcli
+}
+
+// 获取loannode客户端
+//
+func Loannode(s2sname string, cli client.Client) loannode.FriendnodeService {
+	reqcli := loannode.NewLoannodeService(s2sname, cli)
 
 	return reqcli
 }
