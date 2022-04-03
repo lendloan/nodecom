@@ -205,7 +205,7 @@ func Friendnode(s2sname string, cli client.Client) friendnode.FriendnodeService 
 
 // 获取loannode客户端
 //
-func Loannode(s2sname string, cli client.Client) loannode.FriendnodeService {
+func Loannode(s2sname string, cli client.Client) loannode.LoannodeService {
 	reqcli := loannode.NewLoannodeService(s2sname, cli)
 
 	return reqcli
